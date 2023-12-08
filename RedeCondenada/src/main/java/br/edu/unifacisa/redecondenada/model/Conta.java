@@ -11,7 +11,7 @@ public class Conta {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     public Integer id;
-    public String nomeDeUsuario;
+    public String NomeDeUsuario;
     public String senha;
 
     public Integer getId() {
@@ -23,11 +23,11 @@ public class Conta {
     }
 
     public String getNomeDeUsuario() {
-        return nomeDeUsuario;
+        return NomeDeUsuario;
     }
 
     public void setNomeDeUsuario(String nomeDeUsuario) {
-        this.nomeDeUsuario = nomeDeUsuario;
+        this.NomeDeUsuario = nomeDeUsuario;
     }
 
     public String getSenha() {
