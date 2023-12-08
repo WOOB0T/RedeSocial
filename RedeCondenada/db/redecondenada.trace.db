@@ -1,0 +1,18 @@
+2023-11-29 20:00:37.107292-03:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "create table conta ([*]user varchar(255) not null, email varchar(255), senha varchar(255), primary key (user))"; expected "identifier"; SQL statement:
+create table conta (user varchar(255) not null, email varchar(255), senha varchar(255), primary key (user)) [42001-224]
+2023-11-29 20:11:07.960622-03:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "create table conta ([*]user varchar(255) not null, email varchar(255), senha varchar(255), primary key (user))"; expected "identifier"; SQL statement:
+create table conta (user varchar(255) not null, email varchar(255), senha varchar(255), primary key (user)) [42001-224]
+2023-11-29 20:12:43.042333-03:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "create table conta ([*]user varchar(255) not null, email varchar(255), senha varchar(255), primary key (user))"; expected "identifier"; SQL statement:
+create table conta (user varchar(255) not null, email varchar(255), senha varchar(255), primary key (user)) [42001-224]
+2023-11-29 20:15:10.683907-03:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "create table conta ([*]user varchar(255) not null, email varchar(255), senha varchar(255), primary key (user))"; expected "identifier"; SQL statement:
+create table conta (user varchar(255) not null, email varchar(255), senha varchar(255), primary key (user)) [42001-224]
+2023-11-29 20:17:54.548871-03:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "create table conta ([*]user varchar(255) not null, email varchar(255), senha varchar(255), primary key (user))"; expected "identifier"; SQL statement:
+create table conta (user varchar(255) not null, email varchar(255), senha varchar(255), primary key (user)) [42001-224]
+2023-11-29 20:18:25.725687-03:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "create table conta ([*]user varchar(255) not null, email varchar(255), senha varchar(255), primary key (user))"; expected "identifier"; SQL statement:
+create table conta (user varchar(255) not null, email varchar(255), senha varchar(255), primary key (user)) [42001-224]
