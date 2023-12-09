@@ -34,7 +34,7 @@ public class redSocialController {
         Conta verificarConta = this.repository.Entrar(credenciais.getUsuario(), credenciais.getSenha());
         if (verificarConta != null) {
             model.addAttribute("error", null);
-            return "posts";
+            return "redirect:/posts";
         }
         model.addAttribute("error", "Credenciais erradas");
         return "index";
@@ -56,5 +56,5 @@ public class redSocialController {
     public String feedDePostagens(){
         return "posts";
     }
-    
+
 }
