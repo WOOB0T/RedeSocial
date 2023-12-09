@@ -21,7 +21,7 @@ public class redSocialController {
 
     @GetMapping("/login")
     public String telaDeLogin() {
-        return "login";
+        return "index";
     }
 
     @PostMapping()
