@@ -14,7 +14,7 @@ public class Conta {
     private String usuario;
     private String senha;
 
-    @OneToMany
+    @OneToMany(mappedBy = "autor", cascade = CascadeType.ALL)
     private ArrayList<Postagens> postagens;
 
     public Conta(){

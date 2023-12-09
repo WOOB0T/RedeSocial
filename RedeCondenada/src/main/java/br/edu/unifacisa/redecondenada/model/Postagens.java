@@ -14,6 +14,7 @@ public class Postagens {
     private Date data;
 
     @ManyToOne
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Conta autor;
 
     public Conta getAutor() {
