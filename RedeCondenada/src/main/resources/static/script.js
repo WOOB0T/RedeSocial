@@ -9,3 +9,10 @@ registerBtn.addEventListener('click', () => {
 loginBtn.addEventListener('click', () => {
     container.classList.remove("active");
 });
+
+
+// Função para redirecionar para pagina de postagens ao clicar no botão
+function redirectToAnotherPage() {
+    // Redirecionamento para a outra página no mesmo pacote
+    window.location.href = 'posts';
+}

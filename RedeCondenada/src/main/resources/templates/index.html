@@ -1,19 +1,19 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR" xmlns:th="http://www.thymeleaf.org">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="style.css">
-    <title>Rede Social Nova</title>
+    <title>DEVIBE | conecte-se</title>
 </head>
 
 <body>
 
 <div class="container" id="container">
     <div class="form-container sign-up">
-        <form>
+        <form method="post" th:action="@{/registrar}" th:object="${Conta}">
             <h1>Crie sua Conta</h1>
             <div class="social-icons">
                 <a href="#" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>
@@ -22,13 +22,13 @@
                 <a href="#" class="icon"><i class="fa-brands fa-linkedin-in"></i></a>
             </div>
             <span>Ou use um nome de Usuario para Registrar</span>
-            <input type="text" placeholder="Nome de usuario">
-            <input type="password" placeholder="Senha">
+            <input type="text" name="usuario" placeholder="Nome de usuario">
+            <input type="password" name="senha" placeholder="Senha">
             <button>Registrar</button>
         </form>
     </div>
     <div class="form-container sign-in">
-        <form>
+        <form method="post" th:action="@{/login}" th:object="${Conta}">
             <h1>Entrar</h1>
             <div class="social-icons">
                 <a href="#" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>
@@ -37,9 +37,10 @@
                 <a href="#" class="icon"><i class="fa-brands fa-linkedin-in"></i></a>
             </div>
             <span>Ou use seu Nome de Usuario e Senha</span>
-            <input type="text" placeholder="Nome de usuario">
-            <input type="password" placeholder="senha">
-            <button>Entrar</button>
+            <input type="text" name="usuario" placeholder="Nome de usuario">
+            <input type="password" name="senha" placeholder="senha">
+            <button class="botaoDeEntrar" onclick="redirectToAnotherPage()">Entrar</button>
+
         </form>
     </div>
     <div class="toggle-container">
@@ -50,7 +51,7 @@
                 <button class="hidden" id="login">Entrar</button>
             </div>
             <div class="toggle-panel toggle-right">
-                <h1>Ola, Amigo!</h1>
+                <h1>D E V I B E</h1>
                 <p>Registre-se com seus dados pessoais e divirta-se</p>
                 <button class="hidden" id="register">Registrar</button>
             </div>
@@ -59,6 +60,7 @@
 </div>
 
 <script src="script.js"></script>
+
 </body>
 
 </html>
