@@ -1,9 +1,9 @@
 package br.edu.unifacisa.redecondenada.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
+
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 public class Conta {
@@ -11,15 +11,18 @@ public class Conta {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     public Integer id;
-    public String usuario;
-    public String senha;
+    private String usuario;
+    private String senha;
+
+    @OneToMany
+    private ArrayList<Postagens> postagens;
+
+    public Conta(){
+        this.postagens = new ArrayList<>();
+    }
 
     public Integer getId() {
         return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
     }
 
     public String getUsuario() {

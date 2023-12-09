@@ -1,0 +1,87 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    /*border: 1px solid black;*/
+}
+
+body {
+    background-color: #c9d6ff;
+    background: linear-gradient(to right, #e2e2e2, #c9d6ff);
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background-color: #6b79c6;
+    color: #fff;
+    padding: 10px 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo img {
+    width: 127px;
+}
+
+.avatar {
+    display: flex;
+    align-items: center;
+}
+
+.status-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin: 6px;
+    bottom: 0;
+    right: 0;
+    border: 1px solid #fff; /* Borda branca */
+}
+
+.avatar.usuario{
+    text-align: center;
+}
+
+.online {
+    background-color: #3cba54; /* Cor verde para status online */
+}
+
+.user-info{
+    display: flex;
+    align-items: end;
+}
+
+.logout-btn{
+    display: flex;
+    background-color: #512da8;
+    color: #fff;
+    font-size: 12px;
+    padding: 5px 15px;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    cursor: pointer;
+    position: relative;
+    margin-left: 5px;
+
+}
+
+button:hover{
+    background-color: #fff;
+    color: #512da8;
+}
+
+.feed {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-color: #fff;
+    width: 60%; /* 75% da largura da tela */
+    height: 100%; /* 100% da altura da tela */
+    margin: 0 auto; /* Centraliza horizontalmente */
+}
+

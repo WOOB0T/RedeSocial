@@ -16,3 +16,4 @@ function redirectToAnotherPage() {
     // Redirecionamento para a outra página no mesmo pacote
     window.location.href = 'posts';
 }
+

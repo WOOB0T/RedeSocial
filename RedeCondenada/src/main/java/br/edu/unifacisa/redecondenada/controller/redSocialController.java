@@ -2,6 +2,7 @@ package br.edu.unifacisa.redecondenada.controller;
 
 
 import br.edu.unifacisa.redecondenada.model.Conta;
+import br.edu.unifacisa.redecondenada.model.Postagens;
 import br.edu.unifacisa.redecondenada.repository.ContaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -46,15 +47,11 @@ public class redSocialController {
         return "index";
     }
 
-    @GetMapping("/userlist")
-    public String ListUsers(Model model){
-        model.addAttribute("socialUser", repository.findAll());
-        return "userlist";
-    }
-
     @GetMapping("/posts")
     public String feedDePostagens(){
         return "posts";
     }
+
+
 
 }

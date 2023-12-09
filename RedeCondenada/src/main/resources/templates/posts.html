@@ -1,25 +1,34 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR" xmlns:th="http://www.thymeleaf.org">
+
 <head>
     <meta charset="UTF-8">
-    <title>Minha Rede Social - Feed</title>
-    <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="styleposts.css">
+    <script src="/script.js" defer></script>
+    <title>DEVIBE | FEED</title>
 </head>
+
 <body>
-<div class="navbar">
-    <h1>Minha Rede Social</h1>
-    <a href="logout.html">Logout</a>
-</div>
-<div class="post-container">
-    <!-- Área para exibir postagens -->
-    <!-- Estrutura de postagem (post-box) -->
-    <div class="post-box">
-        <h2>Post Title</h2>
-        <p>Description of the post. Lorem ipsum dolor sit amet...</p>
-        <p>Posted by: Username</p>
+
+<header class="header">
+    <div class="logo"><img src="/logoDEVIBE.png" alt="Imagem do Usuário"></div>
+    <div class="user-info">
+        <div class="avatar">
+            <div class="status-dot online"></div>
+            <span class="usuario">usuario desconhecido</span>
+        </div>
+        <button class="logout-btn">Logout</button>
     </div>
-    <!-- Outras postagens podem seguir o mesmo padrão -->
-</div>
-<script src="scripts.js"></script>
-</body>
-</html>
+</header>
+
+<main class="feed"> <!-- feed de postagens -->
+    <h1>Central de postagens</h1>
+    <ul>
+        <li>
+            <h1>AQUI FICARAO AS POSTAGENS</h1>
+            <span> testeeee</span>
+        </li>
+    </ul>
+</main>
