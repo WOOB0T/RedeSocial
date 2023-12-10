@@ -23,12 +23,12 @@
     </div>
 </header>
 
-<main class="feed"> <!-- feed de postagens -->
+<main class="feed">
     <h1>Central de postagens</h1>
     <ul>
-        <li>
-            <h1>AQUI FICARAO AS POSTAGENS</h1>
-            <span> testeeee</span>
+        <li th:each="post : ${postagens}">
+            <h2 th:text="${post.usuario}"></h2>
+            <p th:text="${post.conteudo}"></p>
         </li>
     </ul>
 </main>

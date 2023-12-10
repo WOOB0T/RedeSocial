@@ -2,27 +2,27 @@ package br.edu.unifacisa.redecondenada.model;
 
 import jakarta.persistence.*;
 
-import java.util.Date;
+import java.time.LocalDateTime;
 
 @Entity
-public class Postagens {
+public class Postagens{
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private String conteudo;
-    private Date data;
+    private LocalDateTime data;
 
     @ManyToOne
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Conta autor;
+    @JoinColumn(name = "autor_id")
+    private Conta usuario;
 
-    public Conta getAutor() {
-        return autor;
+    public Conta getUsuario() {
+        return usuario;
     }
 
-    public void setAutor(Conta autor) {
-        this.autor = autor;
+    public void setUsuario(Conta autor) {
+        this.usuario = autor;
     }
 
     public String getConteudo() {
@@ -33,11 +33,11 @@ public class Postagens {
         this.conteudo = conteudo;
     }
 
-    public Date getData() {
+    public LocalDateTime getData() {
         return data;
     }
 
-    public void setData(Date data) {
+    public void setData(LocalDateTime data) {
         this.data = data;
     }
 }
