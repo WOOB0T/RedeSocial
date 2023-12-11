@@ -60,11 +60,17 @@ public class redSocialController {
         return "posts";
     }
 
+    @GetMapping("/newpost")
+    public String novoPost(){
+        return "newpost";
+    }
+
     @PostMapping("/newpost")
     public String novaPostagem(@ModelAttribute Postagens newPost, Model model){
         postsRepository.save(newPost);
-        return "posts";
+        return "newpost";
     }
+
 
 
 }
