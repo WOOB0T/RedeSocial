@@ -21,20 +21,11 @@
     </div>
 </header>
 
-<div class="feed">
-    <div id="post-form">
-        <h2>Escreva algo:</h2>
-        <form id="new-post-form">
-            <textarea id="post-content" placeholder="Despeje seu ódio:"></textarea>
-            <br>
-            <button type="button" onclick="post()">Postar</button>
-        </form>
-    </div>
-
-    <div id="timeline">
-        <!-- Existing posts will be displayed here -->
-    </div>
+<div class="tweet-container">
+    <textarea class="tweet-textarea" placeholder="O que está acontecendo?"></textarea>
+    <button class="tweet-button">Tweetar</button>
 </div>
+
 
 <script>
     function post() {

@@ -7,5 +7,9 @@ import org.springframework.data.jpa.repository.Query;
 public interface ContaRepository extends JpaRepository<Conta, Integer>{
     @Query(value= "select * from Conta where usuario = :usuario and senha = :senha", nativeQuery = true)
     public Conta Entrar(String usuario, String senha);
-}
+
+    @Query(value = "select * from Conta where usuario = :usuario",nativeQuery = true )
+        public Conta verificacaoDeConta(String usuario);
+    }
+
 

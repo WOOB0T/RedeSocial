@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <link rel="stylesheet" href="../static/styleposts.css">
-    <script src="/resources/templates/script.js" defer></script>
+    <link rel="stylesheet" href="/styleposts.css">
+    <script src="/script.js" defer></script>
     <title>DEVIBE | FEED</title>
 </head>
 
@@ -27,7 +27,7 @@
     <h1>Central de postagens</h1>
     <ul>
         <li th:each="post : ${postagens}">
-            <h2 th:text="${post.usuario}"></h2>
+            <h2 th:text="${post.autor}"></h2>
             <p th:text="${post.conteudo}"></p>
         </li>
     </ul>

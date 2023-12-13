@@ -15,14 +15,14 @@ public class Postagens{
 
     @ManyToOne
     @JoinColumn(name = "autor_id")
-    private Conta usuario;
+    private Conta autor;
 
-    public Conta getUsuario() {
-        return usuario;
+    public Conta getAutor() {
+        return autor;
     }
 
-    public void setUsuario(Conta autor) {
-        this.usuario = autor;
+    public void setAutor(Conta autor) {
+        this.autor = autor;
     }
 
     public String getConteudo() {

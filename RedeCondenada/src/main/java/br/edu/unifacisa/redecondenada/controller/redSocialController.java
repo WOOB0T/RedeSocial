@@ -48,9 +48,20 @@ public class redSocialController {
         return "index";
     }
 
-    @RequestMapping("/registrar")
-    public String RegisterUsers(@ModelAttribute Conta credenciais, Model model){
-        contaRepository.save(credenciais);
+    @GetMapping("/registrar")
+    public String showRegisterForm(Model model) {
+        model.addAttribute("Conta", new Conta());
+        return "index";
+    }
+
+    @PostMapping("/registrar")
+    public String cadastrarConta(@ModelAttribute Conta novoUsuario, Model model){
+        Conta novaConta = this.contaRepository.verificacaoDeConta(novoUsuario.getUsuario());
+        if (novaConta == null) {
+            contaRepository.save(novoUsuario);
+        } else{
+            model.addAttribute("usuarioExistente", "Esse nome de Usuario ja Existe.");
+        }
         return "index";
     }
 
@@ -71,6 +82,9 @@ public class redSocialController {
         return "newpost";
     }
 
-
+    @GetMapping("/testes")
+    public String testes(){
+        return "testes";
+    }
 
 }

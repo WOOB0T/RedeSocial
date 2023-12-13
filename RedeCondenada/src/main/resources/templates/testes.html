@@ -1,42 +1,30 @@
 <!DOCTYPE html>
-<html lang="pt-BR" xmlns:th="http://www.thymeleaf.org">
-
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <link rel="stylesheet" href="../static/styleposts.css">
-    <script src="/resources/templates/script.js" defer></script>
+<!--    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">-->
+    <script src="/script.js" defer></script>
     <title>DEVIBE | FEED</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylenewposts.css">
+    <title>Twitter-like Publication</title>
 </head>
-
 <body>
-
-<header class="header">
+<main class="header">
     <div class="logo"><img src="/resources/templates/logoDEVIBE.png" alt="Imagem do Usuário"></div>
     <div class="user-info">
         <div class="avatar">
             <div class="status-dot online"></div>
-            <span class="usuario">batatinha machonheria</span>
+            <span class="usuario">usuario desconhecido</span>
         </div>
         <button class="logout-btn">Logout</button>
     </div>
-</header>
-
-<main class="feed"> <!-- feed de postagens -->
-    <h1>Central de postagens</h1>
-        <ul>
-            <li th:each="posts : ${Postagens}">
-                <span th:text="${posts.getUsuario()}"> testeeee</span>
-            </li>
-        </ul>
 </main>
-
-
-
-
-<script src="../static/script.js"></script>
-
+<div class="tweet-container">
+    <textarea class="tweet-textarea" placeholder="O que está acontecendo?"></textarea>
+    <button class="tweet-button">Tweetar</button>
+</div>
 </body>
-
 </html>
