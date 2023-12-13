@@ -3,26 +3,39 @@ package br.edu.unifacisa.redecondenada.model;
 import jakarta.persistence.*;
 
 import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
 @Entity
 public class Postagens{
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
+    private Integer id;
     private String conteudo;
     private LocalDateTime data;
 
     @ManyToOne
-    @JoinColumn(name = "autor_id")
-    private Conta autor;
+    private Conta user;
 
-    public Conta getAutor() {
-        return autor;
+    public Integer getId() {
+        return id;
     }
 
-    public void setAutor(Conta autor) {
-        this.autor = autor;
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    @PrePersist
+    protected void onCreate() {
+        data = LocalDateTime.now();
+    }
+
+    public Conta getUser() {
+        return user;
+    }
+
+    public void setUser(Conta user) {
+        this.user = user;
     }
 
     public String getConteudo() {
@@ -37,7 +50,8 @@ public class Postagens{
         return data;
     }
 
-    public void setData(LocalDateTime data) {
-        this.data = data;
+    public String getFormattedDate() {
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss");
+        return data.format(formatter);
     }
 }

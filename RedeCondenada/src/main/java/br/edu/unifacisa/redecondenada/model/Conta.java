@@ -14,8 +14,8 @@ public class Conta {
     private String usuario;
     private String senha;
 
-    @OneToMany(mappedBy = "autor", cascade = CascadeType.ALL)
-    private List<Postagens> postagens;
+    @OneToMany(mappedBy = "user")
+    private List<Postagens> postagens = new ArrayList<>();
 
     public List<Postagens> getPostagens() {
         return postagens;
