@@ -48,7 +48,7 @@ public class redSocialController {
     public String logar(@ModelAttribute Conta credenciais, Model model, HttpServletResponse response) {
         Conta verificarConta = this.contaRepository.Entrar(credenciais.getUsuario(), credenciais.getSenha());
         if (verificarConta != null) {
-            CookieService.setCookie(response, "userId", String.valueOf(credenciais.getId()),9999999);
+            CookieService.setCookie(response, "userId", String.valueOf(verificarConta.getId()),9999999);
             model.addAttribute("error", null);
             return "redirect:/posts";
         }
@@ -58,7 +58,7 @@ public class redSocialController {
 
     @GetMapping("/registrar")
     public String showRegisterForm(Model model) {
-        model.addAttribute("Conta", new Conta());
+        model.addAttribute("conta", new Conta());
         return "index";
     }
 
@@ -89,9 +89,9 @@ public class redSocialController {
         return "newpost";
     }
 
-    @PostMapping("/novaPostagem")
+    @PostMapping("/newpost")
     public String novaPostagem(@ModelAttribute Postagens newPost, Model model, HttpServletRequest request){
-        model.addAttribute("post", newPost);
+        model.addAttribute("postagem", newPost);
         String userId = CookieService.getCookie(request, "userId");
         if (userId != null) {
             Optional<Conta> user = contaRepository.findById(Integer.parseInt(userId));
@@ -101,7 +101,7 @@ public class redSocialController {
                 return "redirect:/posts";
             }
         }
-        return "post";
+        return "newpost";
     }
 
     @GetMapping("/exit")

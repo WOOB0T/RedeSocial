@@ -1,29 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nova Postagem</title>
-    <link rel="stylesheet" href="/css/styleposts.css">
+    <link rel="stylesheet" href="/css/stylenewposts.css">
 </head>
 <body>
 
 <header>
     <div class="logo">
-        <img src="seu-logo.png" alt="Logo">
+        <img src="/css/logoDEVIBE.png" alt="Logo">
     </div>
     <div class="avatar usuario">
         <div class="status-dot online"></div>
         <div class="user-info">
             <span>Nome do Usuário</span>
-            <div class="logout-btn">Sair</div>
+            <button class="logout-btn">Sair</button>
         </div>
     </div>
 </header>
 
 <div class="tweet-container">
-    <textarea class="tweet-textarea" placeholder="O que está acontecendo?"></textarea>
-    <button class="post-button">Postar</button>
+    <form th:action="@{/newpost}" th:object="${postagem}" method="post" onsubmit="return post()">
+        <label class="textarea-config">
+            <textarea rows="4" class="tweet-textarea" th:field="*{conteudo}" name="conteudo" placeholder="O que está acontecendo?"></textarea>
+        </label>
+        <button class="post-button" type="submit">Enviar</button>
+    </form>
 </div>
 
 
