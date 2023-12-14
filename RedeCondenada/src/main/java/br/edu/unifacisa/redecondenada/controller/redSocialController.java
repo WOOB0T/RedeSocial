@@ -14,9 +14,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 
-import java.time.LocalDateTime;
 import java.util.Optional;
 
 @Controller
@@ -35,13 +33,13 @@ public class redSocialController {
     }
     @GetMapping()
     public String index() {
-        return "index"; // nome do arquivo que será chamado
+        return "login"; // nome do arquivo que será chamado
     }
 
     @GetMapping("/login")
     public String telaDeLogin(Model model) {
         model.addAttribute("Conta", new Conta());
-        return "index";
+        return "login";
     }
 
     @PostMapping("/logar")
@@ -53,13 +51,13 @@ public class redSocialController {
             return "redirect:/posts";
         }
         model.addAttribute("error", "Credenciais erradas");
-        return "posts";
+        return "login";
     }
 
     @GetMapping("/registrar")
     public String showRegisterForm(Model model) {
         model.addAttribute("conta", new Conta());
-        return "index";
+        return "login";
     }
 
     @PostMapping("/registrar")
@@ -70,7 +68,7 @@ public class redSocialController {
         } else{
             model.addAttribute("usuarioExistente", "Esse nome de Usuario ja Existe.");
         }
-        return "index";
+        return "login";
     }
 
     @GetMapping("/posts")
@@ -79,7 +77,7 @@ public class redSocialController {
         response.setHeader("Pragma", "no-cache");
         response.setHeader("Expires", "0");
 
-        model.addAttribute("postagens", postsRepository.findAll());
+        model.addAttribute("postagens", postsRepository.findAllByOrderByDataDesc());
         return "posts";
     }
 
@@ -113,6 +111,11 @@ public class redSocialController {
     @GetMapping("/testes")
     public String testes(){
         return "testes";
+    }
+
+    @GetMapping("/userposts")
+    public String userposts(){
+        return "userposts";
     }
 
 }

@@ -11,10 +11,11 @@ body {
     background: linear-gradient(to right, #e2e2e2, #c9d6ff);
     display: flex;
     flex-direction: column;
+
 }
 
 header {
-    background-color: #6b79c6;
+    background-color: #512da8;
     color: #fff;
     padding: 10px 10px;
     display: flex;
@@ -24,6 +25,7 @@ header {
 
 .logo img {
     width: 127px;
+    margin-right: 1000px;
 }
 
 .avatar {
@@ -38,7 +40,7 @@ header {
     margin: 6px;
     bottom: 0;
     right: 0;
-    border: 1px solid #fff; /* Borda branca */
+    border: 1px solid #fff;
 }
 
 .avatar.usuario{
@@ -46,7 +48,7 @@ header {
 }
 
 .online {
-    background-color: #3cba54; /* Cor verde para status online */
+    background-color: #3cba54;
 }
 
 .user-info{
@@ -54,20 +56,20 @@ header {
     align-items: center;
 }
 
-.logout-btn{
+.logout-btn {
     display: flex;
     background-color: #512da8;
     color: #fff;
     font-size: 12px;
     padding: 5px 15px;
-    border: 1px solid transparent;
+    border: 1px solid #fff;
     border-radius: 8px;
     font-weight: 600;
     letter-spacing: 0.5px;
     text-transform: uppercase;
     cursor: pointer;
     position: relative;
-    margin-left: 5px;
+    margin-left: 15px;
 }
 
 button:hover{
@@ -82,10 +84,10 @@ button:hover{
     width: 400px;
     padding: 20px;
     display: flex;
-    flex-direction: column; /* Mudança para layout de coluna */
+    flex-direction: column;
     align-items: center;
-    margin: 0 auto; /* Centraliza horizontalmente */
-}
+    margin: 0 auto;
+    vertical-align: middle;}
 
 .tweet-textarea {
     width: 100%;
@@ -106,5 +108,25 @@ button:hover{
     border-radius: 5px;
     cursor: pointer;
     font-size: 14px;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+}
+
+.back-button {
+    background: none;
+    border: none;
+    font-size: 15px;
+    color: #fff;
+    cursor: default;
+    margin-right: 5px;
+    margin-left: 5px;
+    margin-top: 11px;
+}
+
+.back-button:hover {
+    color: #ddd;
 }
 

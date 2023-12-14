@@ -3,7 +3,6 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
-    /*border: 1px solid black;*/
 }
 
 body {
@@ -14,16 +13,18 @@ body {
 }
 
 header {
-    background-color: #6b79c6;
+    background-color: #512da8;
     color: #fff;
     padding: 10px 10px;
     display: flex;
     justify-content: space-between;
     margin-bottom: 1%;
+    align-items: center;
 }
 
 .logo img {
     width: 127px;
+    margin-right: 1000px;
 }
 
 .avatar {
@@ -38,7 +39,7 @@ header {
     margin: 6px;
     bottom: 0;
     right: 0;
-    border: 1px solid #fff; /* Borda branca */
+    border: 1px solid #fff;
 }
 
 .avatar.usuario{
@@ -46,43 +47,201 @@ header {
 }
 
 .online {
-    background-color: #3cba54; /* Cor verde para status online */
+    background-color: #3cba54;
 }
 
 .user-info{
     display: flex;
-    align-items: end;
+    align-items: center;
 }
 
-.logout-btn{
+.logout-btn {
     display: flex;
     background-color: #512da8;
     color: #fff;
     font-size: 12px;
     padding: 5px 15px;
-    border: 1px solid transparent;
+    border: 1px solid #fff;
     border-radius: 8px;
     font-weight: 600;
     letter-spacing: 0.5px;
     text-transform: uppercase;
     cursor: pointer;
     position: relative;
-    margin-left: 5px;
-
+    margin-left: 15px;
 }
 
-button:hover{
+button:hover {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+.container {
+    margin: 20px;
+    padding: 20px;
     background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.feed {
+    margin-top: 20px;
+}
+
+.feed h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    text-align: center;
     color: #512da8;
 }
+
+.feed ul {
+    list-style: none;
+    padding: 0;
+}
+
+.feed li {
+    margin-bottom: 20px;
+}
+
+.avatar {
+    display: flex;
+    align-items: center;
+}
+
+.avatar img {
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+{} ver{
+      background-color: #fff;
+      color: #512da8;
+  }
 
 .feed {
     margin: 0;
     padding: 0;
     height: 100%;
     background-color: #fff;
-    width: 60%; /* 75% da largura da tela */
-    height: 100%; /* 100% da altura da tela */
-    margin: 0 auto; /* Centraliza horizontalmente */
+    width: 60%;
+    height: 100%;
+    margin: 0 auto;
 }
 
+.back-button {
+    background: none;
+    border: none;
+    font-size: 15px;
+    color: #fff;
+    cursor: default;
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+.back-button:hover {
+    color: #ddd;
+}
+
+.new-post-button {
+    background-color: #512da8;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 12px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    cursor: pointer;
+    position: relative;
+    padding: 8px 15px;
+    display: inline-block;
+    width: auto;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    vertical-align: middle;
+}
+
+.search-container {
+    text-align: center;
+    margin: auto;
+}
+
+.search-box {
+    width: 300px;
+    padding: 8px;
+    border: 1px solid #512da8;
+    border-radius: 5px;
+    box-sizing: border-box;
+    margin: 0;
+    display: block;
+    vertical-align: middle;
+    margin-bottom: 10px;
+}
+
+.search-button {
+    background-color: #512da8;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 12px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    cursor: pointer;
+    position: relative;
+    padding: 8px 15px;
+    display: inline-block;
+    width: auto;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    vertical-align: middle;
+}
+
+.feed {
+    margin: 0 auto; /* Centraliza horizontalmente */
+    padding: 20px;
+    width: 60%; /* Define a largura da área de postagens */
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.item {
+    list-style: none; /* Remove os marcadores de lista */
+    padding: 0;
+}
+
+.post {
+    margin-bottom: 20px; /* Espaçamento entre postagens */
+    border-bottom: 1px solid #ccc; /* Linha separadora entre postagens */
+    padding-bottom: 20px; /* Espaçamento inferior */
+}
+
+.post-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.post-header span {
+    font-weight: bold;
+}
+
+.post span {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #333;
+}

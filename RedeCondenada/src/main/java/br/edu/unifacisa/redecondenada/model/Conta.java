@@ -1,5 +1,6 @@
 package br.edu.unifacisa.redecondenada.model;
 
+import br.edu.unifacisa.redecondenada.repository.PostsRepository;
 import jakarta.persistence.*;
 
 import java.util.ArrayList;
@@ -16,10 +17,6 @@ public class Conta {
 
     @OneToMany(mappedBy = "user")
     private List<Postagens> postagens = new ArrayList<>();
-
-    public List<Postagens> getPostagens() {
-        return postagens;
-    }
 
     public void setPostagens(List<Postagens> postagens) {
         this.postagens = postagens;

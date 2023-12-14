@@ -12,8 +12,18 @@ loginBtn.addEventListener('click', () => {
 
 
 // Função para redirecionar para pagina de postagens ao clicar no botão
-function redirectToAnotherPage() {
-    // Redirecionamento para a outra página no mesmo pacote
+function redirectToFeed() {
     window.location.href = 'posts';
+}
+
+function redirectToPost() {
+    window.location.href = 'newpost';
+}
+function logout() {
+    window.location.href = 'exit';
+}
+
+function search() {
+    window.location.href = 'userposts';
 }
 

@@ -5,18 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nova Postagem</title>
     <link rel="stylesheet" href="/css/stylenewposts.css">
+    <script src="/js/script.js" defer></script>
 </head>
 <body>
 
 <header>
+    <div class="back-button" onclick="redirectToFeed()">&#9664;</div>
     <div class="logo">
-        <img src="/css/logoDEVIBE.png" alt="Logo">
+        <img src="DevibeLogo.png" alt="Logo">
     </div>
     <div class="avatar usuario">
         <div class="status-dot online"></div>
         <div class="user-info">
             <span>Nome do Usuário</span>
-            <button class="logout-btn">Sair</button>
+            <div class="logout-btn" onclick="logout()">Sair</div>
         </div>
     </div>
 </header>
@@ -33,20 +35,15 @@
 
 <script>
     function post() {
-        // Get the content from the textarea
         var content = document.getElementById("post-content").value;
 
-        // Check if the content is not empty
         if (content.trim() !== "") {
-            // Create a new post element
             var postElement = document.createElement("div");
             postElement.className = "post";
             postElement.innerHTML = "<p>" + content + "</p>";
 
-            // Append the new post to the timeline
             document.getElementById("timeline").appendChild(postElement);
 
-            // Clear the textarea
             document.getElementById("post-content").value = "";
         }
     }

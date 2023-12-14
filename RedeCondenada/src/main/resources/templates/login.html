@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="css/style.css">
     <title>DEVIBE | conecte-se</title>
 </head>
 
@@ -13,37 +13,41 @@
 
 <div class="container" id="container">
     <div class="form-container sign-up">
-        <form method="post" th:action="@{/registrar}" th:object="${conta}">
+        <form method="post" th:action="@{/registrar}" th:object="${Conta}">
             <h1>Crie sua Conta</h1>
-            <br>
+            <div class="social-icons">
+                <a href="#" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>
+                <a href="#" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#" class="icon"><i class="fa-brands fa-github"></i></a>
+                <a href="#" class="icon"><i class="fa-brands fa-linkedin-in"></i></a>
+            </div>
             <span>Ou use um nome de Usuario para Registrar</span>
             <label>
-                <input type="text" th:field="*{usuario}" name="usuario" placeholder="Nome de usuario" required>
+                <input type="text" name="usuario" placeholder="Nome de usuario">
             </label>
             <label>
-                <input type="password" th:field="*{usuario}" name="senha" placeholder="Senha" required>
+                <input type="password" name="senha" placeholder="Senha">
             </label>
-            <br>
-            <div th:if="${usuarioExistente != null}" th:text="${usuarioExistente}"></div>
-            <br>
-            <button type="submit">Registrar</button>
+            <button>Registrar</button>
         </form>
     </div>
     <div class="form-container sign-in">
         <form method="post" th:action="@{/logar}" th:object="${conta}">
             <h1>Entrar</h1>
-            <br>
+            <div class="social-icons">
+                <a href="#" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>
+                <a href="#" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#" class="icon"><i class="fa-brands fa-github"></i></a>
+                <a href="#" class="icon"><i class="fa-brands fa-linkedin-in"></i></a>
+            </div>
             <span>Ou use seu Nome de Usuario e Senha</span>
             <label>
-                <input type="text" th:field="*{usuario}" name="usuario" placeholder="Nome de usuario">
+                <input type="text" name="usuario" placeholder="Nome de usuario">
             </label>
             <label>
-                <input type="password" th:field="*{usuario}" name="senha" placeholder="Senha">
+                <input type="password" name="senha" placeholder="senha">
             </label>
-            <br>
-            <div th:if="${error != null}" th:text="${error}" id="wrongCredentials"></div>
-            <br>
-            <button type="submit" class="botaoDeEntrar" onclick="redirectToAnotherPage()">Entrar</button>
+            <button class="botaoDeEntrar" onclick="redirectToFeed()">Entrar</button>
 
         </form>
     </div>
@@ -63,7 +67,7 @@
     </div>
 </div>
 
-<script src="/js/script.js" defer></script>
+<script src="js/script.js"></script>
 
 </body>
 
